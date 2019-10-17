@@ -1,0 +1,64 @@
+<!-- templates/playlists_new.html -->
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="playlister">
+<form method='POST' action='/playlists'>
+    <fieldset>
+    <legend>New Playlist</legend>
+    <!-- TITLE -->
+    <p>
+        <label for='playlist-title'>Title</label><br>
+        <input type='playlist-text' name='title' />
+    </p>
+    <p>
+        <label for='description'>Description</label><br>
+        <input id='description' type='text' name='description' />
+    </p>
+    <!-- DROP DOWN RATING -->
+    <span class="dropdown">    
+    <p>
+        <label for='rating'>Rating</label><br>
+        <ul class='dropdown'>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>5</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>4</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>3</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>2</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>1</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>0</label>
+         </li>
+        </ul>
+        </p>
+    </span>
+    <!-- VIDEO LINKS -->
+    <p>
+        <label for='playlist-videos'>Videos</label><br>
+        <p>Add videos in the form of 'https://youtube.com/embed/KEY'. Separate with a newline.</p>
+        <textarea id='playlist-videos' name='videos' rows='10'></textarea>
+    </p>
+    </fieldset>
+
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save Playlist</button>
+    </p>
+</form>
+</div>
+{% endblock %}

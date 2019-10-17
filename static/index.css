@@ -1,0 +1,22 @@
+body{
+background-color: #189d42;
+}
+/*drop down rating*/
+ul{
+    padding: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+}
+li{
+    list-style: none;
+    list-style:none;
+    text-align: center;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+}
+.dropdown {
+    background-color: rgb(238, 152, 196);
+    max-width: 500px;
+} 

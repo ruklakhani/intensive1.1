@@ -1,0 +1,58 @@
+<!-- templates/partials/playlists_form.html -->
+  
+<fieldset>
+    <legend>Edit Playlist</legend>
+    <!-- TITLE -->
+    <div class='form-group'>
+        <label for='playlist-title'>Title</label><br>
+        <input class='form-control' id='playlist-title' type='text' name='title' value='{{ playlist.title }}'/>
+    </div>
+    <!-- DROP DOWN RATING -->>
+    <p>
+        <label for='rating'>Rating</label><br>
+        <ul class='dropdown'>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>5</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>4</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>3</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>2</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>1</label>
+        </li>
+        <li>
+            <input type="radio" name="likert" value="strong_agree">
+            <label>0</label>
+          </li>
+        </ul>
+        </p>
+    </span>
+    <!-- DESCRIPTION -->
+    <p>
+      <label for='description'>Description</label><br>
+      <input id='description' type='text' name='description' value='{{ playlist.description }}' />
+    </p>
+    
+    <!-- VIDEO LINKS -->
+    <p>
+      <label for='playlist-videos'>Videos</label><br>
+      <p>Add videos in the form of 'https://youtube.com/embed/KEY'. Separate with a newline.</p>
+      <textarea id='playlist-videos' name='videos' rows='10'>{{ "\n".join(playlist.videos) }}</textarea>
+    </p>
+    </fieldset>
+    
+    <!-- BUTTON -->
+    <p>
+        <button type='submit'>Save Playlist</button>
+    </p>
